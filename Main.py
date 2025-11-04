@@ -1,6 +1,7 @@
 import socket
 import time
 import os
+import platform
 import binascii
 import json
 import traceback
@@ -80,6 +81,27 @@ class ClientThread(Thread):
             else:
                 print('[*] Received an invalid packet from client')
                 self.client.close()
+
 if __name__ == '__main__':
-	server = ServerThread("0.0.0.0", 9339)
-	server.start()
+    # Install requirements
+    os.system("pip install -r requirements.txt")
+
+    # Platform stuff
+    if os.name == "nt":  # Windows
+        os.system("title CoC 5.2-6.56.1")
+    else:  # Linux/MacOS
+        print("\033]0;CoC 5.2-6.56.1\007", end="")
+    os.system("cls" if platform.system() == "Windows" else "clear")
+
+    print("""
+      ____ _           _              __    ____ _                 
+    / ___| | __ _ ___| |__     ___  / _|  / ___| | __ _ _ __  ___ 
+    | |   | |/ _` / __| '_ \   / _ \| |_  | |   | |/ _` | '_ \/ __|
+    | |___| | (_| \__ \ | | | | (_) |  _| | |___| | (_| | | | \__ \
+        
+     \____|_|\__,_|___/_| |_|  \___/|_|    \____|_|\__,_|_| |_|___/
+    """)
+
+    # Listener
+    server = ServerThread("0.0.0.0", 9339)
+    server.start()

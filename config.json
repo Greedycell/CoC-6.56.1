@@ -22,6 +22,7 @@
     "AllianceHighID": 0,
     "AllianceLowID": 1,
     "AllianceName": "Clashers",
+    "AllianceDescription": "Welcome to Clash of Clans!",
     "AllianceBadge": 13000000,
     "AllianceMailMessage": "Attention Clanmates: ",
     "AllianceChatMessage": "Hi!",

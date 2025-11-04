@@ -3,7 +3,6 @@ from Utils.Writer import Writer
 
 config = json.load(open("config.json", "r"))
 
-
 class LogicClientAvatar(Writer):
 
     def encode(self):
