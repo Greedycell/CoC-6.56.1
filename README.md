@@ -1,5 +1,5 @@
-# CoC-5.2.4
-First open-source server for Clash Of Clans 5.2.4!
+# CoC-6.56.1
+Open-source server for Clash Of Clans 5.2.4-6.56.1! (Fork of Solaree with alot of fixes and 6.56.1 compatability)
 
 ## Requirements
 **Python** (3.9 - 3.11)
